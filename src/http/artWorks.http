@@ -1,0 +1,46 @@
+# ArtWorks API
+
+###
+# baseURL
+@baseURL = http://localhost:3000
+
+###
+# Find All ArtWorks
+GET {{baseURL}}/artWorks
+
+###
+# Find ArtWork By Id
+GET {{baseURL}}/artWorks/1
+
+
+###
+# Add ArtWork
+POST {{baseURL}}/artWorks
+Content-Type: application/json
+
+{
+  "title": "example title",
+	"type": "oil",
+  "size": "10x10",
+  "description": "awesome painting",
+  "price": 150000,
+  "dateOfCompletion": "2021-01-01"
+}
+
+###
+# Edit ArtWork By Id
+PUT {{baseURL}}/artWorks/1
+Content-Type: application/json
+
+{
+  "title": "example title",
+	"type": "oil",
+  "size": "10x10",
+  "description": "awesome painting",
+  "price": 150000,
+  "dateOfCompletion": "2021-01-01"
+}
+
+###
+# Del ArtWork By Id
+DELETE {{baseURL}}/artWorks/1
